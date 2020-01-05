@@ -1,0 +1,545 @@
+////Reverse string
+def reverse(s):
+    str = ""
+    for i in s:
+        str = i + str
+    return str
+
+s = "shashi Ranjan"
+
+print(reverse(s))
+
+////vowels count
+object HelloWorld {
+   def main(args: Array[String]) {
+      println("Hello, world!")
+      var count = 0
+  var name = "shashi"
+  val len = name.length()
+  for (i <- 0 to len-1) {
+    if (name(i) == 'a' || name(i) == 'e' || name(i) == 'i' || name(i) == 'o' || name(i) == 'u') {
+      count = count + 1
+    }
+  }
+
+  println(count)
+   }
+}
+/////factorial
+package threadss
+
+object scalaLogical {
+
+  def main(args: Array[String]): Unit = {
+    def factorial(n: Int): Int =
+    {
+      if (n == 0)
+        return 1
+      else
+        return n * factorial(n-1)
+    }
+    println(factorial(5))
+
+  }
+
+}
+///
+av=3
+cand=int(input("Ente no of candy:"))
+i=1
+while i <= cand:
+    if i>av:
+        print("out of stock")
+        break
+    i+=1
+    print("candy")
+
+
+///
+s=range(1,16)
+for i in s:
+    if (i%2==0):
+        continue
+    print(i)
+
+
+////
+for i in range(4):
+    for j in range(4):
+        print("#", end=" ")
+
+
+    print()
+////
+for i in range(4):
+    for j in range(i+1):
+        print("#", end=" ")
+
+
+    print()
+///
+for i in range(4):
+    for j in range(i):
+        print("#", end=" ")
+
+
+    print()
+////fabonic
+def f(n):
+    a=0
+    b=1
+    print(a)
+    print(b)
+    for i in range(2,n):
+        c=a+b
+        a=b
+        b=c
+        print(c)
+f(5)
+////factorial
+def fact(n):
+    f=1
+    for i in range(1,n+1):
+        f=f*i
+    print(f)
+
+fact(5)
+////factorial 
+def fact(n):
+    if n==0:
+        return 1
+    return n*fact(n-1)
+
+print(fact(2))
+/////////////vowels count
+def vowel_count(str):
+
+    count = 0
+
+    vowel = set("aeiouAEIOU")
+
+    for alphabet in str:
+
+        if alphabet in vowel:
+            count = count + 1
+
+    print("No. of vowels :", count)
+
+str = "GeeksforGeeks"
+
+vowel_count(str)
+////
+def countCharacterType(str):
+
+    vowels = 0
+    consonant = 0
+    specialChar = 0
+    digit = 0
+
+    for i in range(0, len(str)):
+
+        ch = str[i]
+
+        if ((ch >= 'a' and ch <= 'z') or
+                (ch >= 'A' and ch <= 'Z')):
+
+            # To handle upper case letters
+            ch = ch.lower()
+
+            if (ch == 'a' or ch == 'e' or ch == 'i'
+                    or ch == 'o' or ch == 'u'):
+                vowels += 1
+            else:
+                consonant += 1
+
+        elif (ch >= '0' and ch <= '9'):
+            digit += 1
+        else:
+            specialChar += 1
+
+    print("Vowels:", vowels)
+    print("Consonant:", consonant)
+    print("Digit:", digit)
+    print("Special Character:", specialChar)
+
+str = "geeks#for@ geeks121"
+countCharacterType(str)
+////vowel replace
+def rem_vowel(string):
+    vowels = ('a', 'e', 'i', 'o', 'u')
+    count=0
+    constant=0
+    for x in string.lower():
+        if x in vowels:
+            count +=1
+            string = string.replace(x, "")
+        else:
+            constant +=1
+
+            # Print string without vowels
+    print(string)
+    print(count)
+    print(constant)
+
+
+# Driver program
+string = "shashi"
+rem_vowel(string)
+
+////pyramid
+def triangle(n):
+
+    for i in range(0, n):
+        for j in range(0,n-i-1):
+            print(end=" ")
+        for j in range(0,i+1):
+            print("*",end=" ")
+
+        print()
+
+
+n = 5
+triangle(n)
+
+////pyramid
+def triangle(n):
+
+    for i in range(0, n):
+        print(' '*(n-i-1)+'*'*(i+1))
+
+n = 5
+triangle(n)
+////// heart
+def triangle(n):
+
+    for row in range(0, n):
+        for column in range(0,n+1):
+            if(row==0 and column%3!=0) or (row==1 and column%3==0) or (row-column==2) or (row+column==8):
+                print("*",end=" ")
+            else:
+                print(" ",end=" ")
+        print()
+
+n=6
+triangle(n)
+
+///////triangle
+def triangle(n):
+
+    for i in range(1, n):
+        for j in range(1,i+1):
+            print("*",end=" ")
+        print()
+
+
+n=6
+triangle(n)
+
+//////////////down pyramid
+def triangle(n):
+
+    for i in range(n,0,-1):
+        for j in range(0,n-i):
+            print(end=" ")
+        for j in range(0,i):
+            print("*",end=" ")
+        print()
+
+
+
+n=6
+triangle(n)
+///updown pyramid
+def triangle(n):
+
+    for i in range(n):
+        print(' '*(n-i-1)+"* "*(i+1))
+    for j in range(n-1,0,-1):
+        print(' '*(n-j)+"* "*(j))
+
+
+n=6
+triangle(n)
+
+/////down triangle
+def triangle(n):
+
+    for i in range(n,0,-1):
+
+        for j in range(0,i):
+
+            print("*",end=" ")
+
+        print()
+
+n=6
+triangle(n)
+/////duplicate
+def removeDuplicate(str, n):
+
+    index = 0
+    dictt = {}
+
+    for val in str:
+        dictt[val] = 0
+
+    print(dictt)
+    # geeksforgeeks
+    for val in str:
+        # try:
+            dictt[val] = dictt[val] + 1
+        # except:
+        #     dictt[val] = 1
+
+    for key in dictt:
+        if dictt[key]>1:
+            print(key, end='')
+    print()
+    # for i in range(0,n):
+    #     ind = True
+    #     for j in range(0, i+1):
+    #         if str[i] == str[j] and i != j:
+    #             ind = False
+    #             break
+    #     if ind:
+    #         str[index] = str[i]
+    #         index += 1
+
+    x = [0]*26
+
+    for ele in str:
+        x[ord(ele)-ord('a')] +=1
+    for i in range(0, 26):
+        if x[i]>1:
+            print(chr(i+ 97), end='->')
+
+
+
+
+    return "".join(str[:index])
+
+
+
+str = "geeksforgeeks"
+n = len(str)
+print(removeDuplicate(list(str), n))
+// Remove duplicate
+st = 'shashiiiiii'
+output =''
+for i in st:
+    if i not in output:
+        output = output+i
+
+print(output)
+
+or(2 way)
+st = 'shashiiiiii'
+output =[]
+for i in st:
+    if i not in output:
+        output.append(i)
+l="".join(output)
+
+print(l)
+
+///////print duplicate
+st = 'shashiiiiii'
+output =''
+for i in st:
+    if i not in output:
+        output = output+i
+    else:
+        print(i,end="")
+
+//////////////print string are anagram
+def check(s1, s2):
+
+    if (sorted(s1) == sorted(s2)):
+        print("The strings are anagrams.")
+    else:
+        print("The strings aren't anagrams.")
+
+
+s1 = "listen"
+s2 = "silent"
+check(s1, s2)
+
+////first repetive character
+str1="ashddeefhhiissaadk"
+char_order = []
+counts = {}
+
+for c in str1:
+    if c in counts:
+        counts[c] += 1
+    else:
+        counts[c] = 1
+        char_order.append(c)
+for c in char_order:
+      if counts[c] == 1:
+          print(c)
+          break
+
+
+
+
+print(counts)
+print(char_order)
+
+////////////// Smallest No
+
+A=[10,12,5,67,80,16,2,-5]
+low=A[0]
+for x in range(len(A)):
+    if A[x]< low:
+        low=A[x]
+print(low)
+
+////////////greater
+A=[10,12,5,67,80,16,2,-5]
+greater=A[0]
+for x in range(len(A)):
+    if A[x]> greater:
+        greater=A[x]
+print(low)
+
+////permutation in string
+def swap(l,x,y):
+    l[x],l[y]=l[y],l[x]
+def pre(l,i):
+    if(i==len(l)):
+        print(l)
+        return
+    else:
+        for j in range(i,len(l)):
+            swap(l,i,j)
+            pre(l,i+1)
+            swap(l,i,j)
+l=list("abc")
+pre(l,0)
+
+////////////// check prime no
+n=13
+for i in range(2,13):
+    if (n%i)==0:
+        break
+    else:
+     print(n)
+     break
+
+////////////adding 1 to 100
+total=0
+i=1
+while i<=101:
+
+    total=total+i
+    i +=1
+print(total)
+or
+total=0
+
+for i in range(5,0,-1):
+
+    total=total+i
+
+print(total)
+
+//////////factorial
+n=6
+f=1
+for i in range(n,0,-1):
+    f=f*i
+print(f)
+
+//////palendrom///not follow
+string="radar"
+reverse=string[::-1]
+if reverse==string:
+    print("pallendrom")
+else:
+   print("not")
+print(reverse)
+
+////////////replace space with * in string
+string="string string"
+s=list(string)
+for i in range(len(s)):
+    if s[i]==" ":
+        s[i] = "*"
+
+
+
+strings="".join(s)
+print(strings)
+print(s)
+/////pallendrom
+String="radar"
+length=len(String)
+for i in range(length):
+    for j in range(length-1,0,-1):
+        if String[i]!=String[j]:
+            print("pallendrom")
+            break
+////////////pallindrom
+def palindrome():
+    string="aba"
+    length=len(string)
+    print(length)
+    i = 0
+    j = length-1
+    while i < j:
+        if string[i] != string[j]:
+                return "string is not palindrome"
+        i = i+1
+        j = j-1
+    return  "string is [palindrom"
+    # st=""
+    # j = length-1
+    # for i in range(length):
+    #     if i < j:
+    #         if string[i] != string[j]:
+    #             return "string is not palindrome"
+    #     else:
+    #         break
+    #     j = j-1
+    # return "string is palindrome"
+
+
+if __name__ == '__main__':
+    print(palindrome())
+
+/////pallindrom
+def pallindrome():
+    n = "aba"
+    length = len(n)
+    i=0
+    j=length-1
+    ind=True
+    while i<j:
+        if n[i]!=n[j]:
+            ind= False
+            break
+        i=i+1
+        j=j-1
+
+    if ind:
+       return "pallindrome"
+    else:
+       return "not pallindrome"
+
+
+
+print(pallindrome())
+
+
+
+
+
+
+
+
+
+
+
+
+
